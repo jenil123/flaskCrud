@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{% block head %}
+
+
+{% endblock%}
+
+{% block body %}
+
+<div >
+    <h1 style="display: inline;"">All posts</h1>
+    <a style="display: inline;" class='btn btn-success float-right' href='/posts/new' >+ Add new Info</a>
+</div>
+<hr>
+{% for posts in post%}
+    <h2>
+        {{posts.name}}
+    </h2>
+    <h2>
+        {{posts.lastname}}
+    </h2>
+    <h4 >
+        {{posts.hobby}}
+    </h4>
+    <a class=" btn btn-danger" href="/posts/delete/{{posts.id}}">Delete</a>
+    <a class=" btn btn-success" href="/posts/edit/{{posts.id}}">Edit</a>
+    <hr>
+{%endfor%}
+
+{% endblock%} 

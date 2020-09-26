@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{% block head %}
+
+
+{% endblock%}
+
+{% block body %}
+
+<h1>New  post</h1>
+<hr>
+<h2> Personal info page</h2>
+
+<form action='/posts' method="POST">
+    First name:
+    <input class="form-control" type="text" name="name" id="name" placeholder="First name" aria-label="Fisrt name">
+    <br>
+    last name: 
+    <input class="form-control" type="text" name="lastname" id="lastname" placeholder="Last name" aria-label="last name">
+    <br>
+    Hobby: 
+    <textarea class="form-control" name="hobby" placeholder="hobby" id="hobby" rows="3"></textarea>
+    <br>
+    <input type='submit' value="POST">
+</form>
+</hr>
+
+{% endblock%} 
+

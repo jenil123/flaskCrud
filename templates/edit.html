@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{% block head %}
+
+
+{% endblock%}
+
+{% block body %}
+
+<h1>Edit posts</h1>
+<hr>
+<h2>Edit existing personal info page</h2>
+
+<form action='/posts/edit/{{post.id}}' method="POST">
+    First name:
+    <input class="form-control" type="text" name="name" id="name" value="{{post.name}}" aria-label="Fisrt name">
+    <br>
+    last name: 
+    <input class="form-control" type="text" name="lastname" id="lastname" value="{{post.lastname}}" aria-label="last name">
+    <br>
+    Hobby: 
+    <textarea class="form-control" name="hobby" placeholder="hobby" id="hobby" rows="3">{{post.hobby}}</textarea>
+    <br>
+    <input class="btn btn-primary" type='submit' value="Save">
+</form>
+</hr>
+
+{% endblock%} 
+
